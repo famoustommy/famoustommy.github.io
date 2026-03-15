@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <title>易我经纬人格罗盘｜三视角看清你的人格底盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="易我经纬人格罗盘：从自我 / 他人 / 情境三个角度梳理你的行为倾向，输出可读的画像与行动建议，仅作自我认知参考。">
-  <!-- 腾讯广告要求：强制HTTPS -->
+  <meta name="description" content="易我经纬人格罗盘：从自我 / 他人 / 情境三个角度梳理行为倾向，基础报告免费，仅作自我认知参考。">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <!-- 新增：降低风险提示的meta标签 -->
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="青岛新趋势商贸">
+  <meta name="referrer" content="no-referrer-when-downgrade">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -177,7 +180,7 @@
       color: #8c9aa8;
       margin-top: 4px;
     }
-    /* 新增小程序码样式 */
+    /* 小程序码样式（修复显示问题） */
     .qrcode-section {
       text-align: center;
       padding: 20px 0;
@@ -189,6 +192,9 @@
       border: 4px solid #fff;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      /* 新增：强制图片显示 */
+      display: block;
+      object-fit: cover;
     }
     .qrcode-desc {
       font-size: 14px;
@@ -196,7 +202,7 @@
       font-weight: 500;
       margin-bottom: 5px;
     }
-    /* 新增免费报告引导样式 */
+    /* 免费报告标签样式 */
     .free-report-tag {
       display: inline-block;
       background: #10b981;
@@ -211,7 +217,7 @@
 </head>
 <body>
   <div class="page">
-    <!-- 首屏 -->
+    <!-- 首屏（保留所有原始文案） -->
     <section>
       <h1>易我经纬人格罗盘：三视角看清你的人格底盘</h1>
       <p class="subtitle">
@@ -229,15 +235,18 @@
       <p class="cta-note">约 3–12 分钟完成，<strong>基础报告免费获取</strong>，按需选择深度分析版本</p>
     </section>
 
-    <!-- 小程序码展示区域 -->
+    <!-- 小程序码展示区（替换为你的真实raw链接） -->
     <section class="qrcode-section">
       <h2><span class="free-report-tag">基础报告免费</span>微信扫码直达测评</h2>
-      <img src="https://placeholder.qr-code.com/180x180" alt="易我经纬人格罗盘小程序码" class="qrcode-img">
+      <!-- 👇 替换成你GitHub里小程序码的raw链接 👇 -->
+      <img src="https://raw.githubusercontent.com/famoustommy/famoustommy.github.io/87f83776a0fcb815520d81bfade34330b6dc0ab3/qrcode-miniprogram.png" 
+           alt="易我经纬人格罗盘小程序码" 
+           class="qrcode-img">
       <p class="qrcode-desc">微信扫码进入小程序，立即获取免费基础人格报告</p>
       <p class="cta-note">若扫码无反应，可复制链接到微信打开</p>
     </section>
 
-    <!-- 你可能遇到的情况 -->
+    <!-- 保留所有原始文案：你可能遇到的情况 -->
     <section>
       <h2>你可能正在经历的情况</h2>
       <p class="tagline">很多问题不是“没能力”，而是惯性模式始终没被看清。</p>
@@ -252,7 +261,7 @@
       </p>
     </section>
 
-    <!-- 你会得到什么 -->
+    <!-- 保留所有原始文案：你会得到什么 -->
     <section>
       <h2>做完这份测评，你会得到什么</h2>
       <div class="columns columns-3">
@@ -280,7 +289,7 @@
       </p>
     </section>
 
-    <!-- 测评流程 -->
+    <!-- 保留所有原始文案：测评流程 -->
     <section>
       <h2>测评流程：3 步完成</h2>
       <div class="columns">
@@ -305,7 +314,7 @@
       </div>
     </section>
 
-    <!-- 适合人群 + FAQ -->
+    <!-- 保留所有原始文案：适合人群 + FAQ -->
     <section>
       <div class="columns columns-2">
         <div>
@@ -345,7 +354,7 @@
       </div>
     </section>
 
-    <!-- 核心转化：小程序一键跳转 + 免费引导 -->
+    <!-- 保留所有原始文案：核心转化 -->
     <section style="background: linear-gradient(145deg, #f0f4ff, #eef2ff); border: 1px solid #e0e7ff;">
       <h2 style="text-align: center; color: #4f46e5; margin-bottom: 8px;">立即进入易我经纬人格罗盘小程序</h2>
       <p style="text-align:center; color:#4f46e5; margin-bottom:16px; font-size:14px;">
@@ -355,7 +364,7 @@
       <p class="cta-note" style="margin-top: 10px;">微信内打开自动跳转小程序，外部浏览器将引导至微信打开</p>
     </section>
 
-    <!-- 底部合规信息：公司/备案/域名（腾讯广告审核必备） -->
+    <!-- 保留所有原始文案：底部合规 -->
     <div class="footer">
       青岛新趋势测评长系统 版权所有 © 2025<br>
       网站名称：新趋势商贸官方网站 | 域名：yiwo.me
