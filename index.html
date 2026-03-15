@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>易我经纬人格罗盘｜三视角看清你的人格底盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="易我经纬人格罗盘：从自我 / 他人 / 情境三个角度梳理你的行为倾向，基础报告免费，专业版解锁深度分析。">
+  <meta name="description" content="易我经纬人格罗盘：从自我 / 他人 / 情境三个角度梳理你的行为倾向，输出可读的画像与行动建议，仅作自我认知参考。">
+  <!-- 腾讯广告要求：强制HTTPS -->
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -17,178 +18,348 @@
     .page {
       max-width: 780px;
       margin: 0 auto;
-      padding: 20px 15px 40px;
+      padding: 16px 12px 40px;
     }
     section {
       background: #fff;
-      border-radius: 16px;
-      padding: 20px 18px;
-      margin-bottom: 16px;
-      box-shadow: 0 4px 16px rgba(15,23,42,0.08);
+      border-radius: 14px;
+      padding: 18px 16px;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 14px rgba(15,23,42,0.06);
     }
     h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
+      font-size: 22px;
+      margin-bottom: 8px;
       font-weight: 700;
       color: #111827;
-      text-align: center;
     }
     h2 {
-      font-size: 19px;
-      margin-bottom: 10px;
+      font-size: 18px;
+      margin-bottom: 8px;
       font-weight: 600;
       color: #111827;
     }
-    .subtitle {
+    h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #111827;
+    }
+    p {
       font-size: 14px;
+      color: #374151;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 13px;
       color: #4b5563;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-    .free-badge {
-      display: inline-block;
-      font-size: 12px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: #10b981;
-      color: #fff;
-      font-weight: 600;
-      margin: 0 4px;
-    }
-    .pro-badge {
-      display: inline-block;
-      font-size: 12px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: #f59e0b;
-      color: #fff;
-      font-weight: 600;
-      margin: 0 4px;
+      margin-bottom: 12px;
     }
     .badge-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-      margin-bottom: 20px;
+      gap: 6px;
+      margin-bottom: 10px;
     }
     .badge {
-      font-size: 12px;
-      padding: 5px 10px;
+      font-size: 11px;
+      padding: 4px 8px;
       border-radius: 999px;
       background: #eef2ff;
       color: #4f46e5;
       white-space: nowrap;
     }
-    .qrcode-section {
-      background: linear-gradient(135deg, #fff5f0, #ffe8d6);
-      border: 1px solid #ffd0a8;
+    .cta-main {
+      display: inline-block;
+      width: 100%;
       text-align: center;
-      padding: 25px 18px;
-    }
-    .qrcode-img {
-      width: 220px;
-      height: 220px;
-      border-radius: 14px;
-      box-shadow: 0 6px 20px rgba(255,122,0,0.3);
-      margin: 0 auto 15px;
-    }
-    .qrcode-tip {
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg,#4f46e5,#6366f1);
+      color: #fff;
       font-size: 15px;
-      color: #ff7a00;
       font-weight: 600;
-      margin-top: 10px;
+      text-decoration: none;
+      margin: 6px 0 4px;
+      box-shadow: 0 8px 18px rgba(79,70,229,0.35);
     }
-    .testimonial {
-      font-size: 14px;
+    .cta-main:active {
+      transform: translateY(1px);
+      box-shadow: 0 4px 10px rgba(79,70,229,0.25);
+    }
+    .cta-secondary {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding: 14px 20px;
+      border-radius: 999px;
+      background: linear-gradient(135deg,#FF7A00,#FF9F43);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      margin: 10px 0 8px;
+      box-shadow: 0 8px 20px rgba(255,122,0,0.3);
+    }
+    .cta-secondary:active {
+      transform: translateY(2px);
+      box-shadow: 0 4px 12px rgba(255,122,0,0.2);
+    }
+    .cta-note {
+      font-size: 12px;
       color: #6b7280;
-      font-style: italic;
-      margin: 10px 0;
-      padding-left: 12px;
-      border-left: 3px solid #4f46e5;
+      text-align: center;
     }
-    .benefit-list {
-      margin-left: 20px;
+    ul {
+      margin-left: 14px;
+      margin-bottom: 4px;
+    }
+    li {
+      font-size: 13px;
       color: #374151;
-      font-size: 15px;
-      line-height: 1.8;
+      margin-bottom: 4px;
     }
-    .benefit-list li {
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    @media (min-width: 640px) {
+      .columns-3 { grid-template-columns: repeat(3, 1fr); }
+      .columns-2 { grid-template-columns: repeat(2, 1fr); }
+    }
+    .card {
+      background: #f9fafb;
+      border-radius: 10px;
+      padding: 10px 10px 8px;
+    }
+    .card-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+    .card-text {
+      font-size: 12px;
+      color: #4b5563;
+    }
+    .tagline {
+      font-size: 12px;
+      color: #6b7280;
+      margin-bottom: 6px;
+    }
+    .muted {
+      font-size: 12px;
+      color: #6b7280;
+    }
+    .faq-item {
       margin-bottom: 8px;
     }
-    .price-note {
-      text-align: center;
-      font-size: 14px;
-      color: #6b7280;
-      margin-top: 12px;
+    .faq-q {
+      font-size: 13px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 2px;
+    }
+    .faq-a {
+      font-size: 12px;
+      color: #4b5563;
     }
     .footer {
       text-align: center;
-      font-size: 12px;
+      font-size: 11px;
       color: #9ca3af;
-      margin-top: 25px;
+      margin-top: 20px;
       line-height: 1.8;
     }
     .icp-info {
-      font-size: 11px;
+      font-size: 10px;
       color: #8c9aa8;
-      margin-top: 5px;
+      margin-top: 4px;
+    }
+    /* 新增小程序码样式 */
+    .qrcode-section {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .qrcode-img {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 10px;
+      border: 4px solid #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .qrcode-desc {
+      font-size: 14px;
+      color: #374151;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    /* 新增免费报告引导样式 */
+    .free-report-tag {
+      display: inline-block;
+      background: #10b981;
+      color: #fff;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+      vertical-align: middle;
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <!-- 首屏标题区：强化免费+专业版 -->
+    <!-- 首屏 -->
     <section>
-      <h1>🧭 易我经纬人格罗盘</h1>
+      <h1>易我经纬人格罗盘：三视角看清你的人格底盘</h1>
       <p class="subtitle">
-        三视角看清你的人格底盘 · 3分钟读懂你的行为惯性<br>
-        <span class="free-badge">基础报告免费</span>
-        <span class="pro-badge">专业版 ¥19.9 解锁</span>
+        基于自评问卷，从 <strong>自我视角 / 他人视角 / 情境视角</strong> 三个角度梳理你的行为倾向，
+        形成 8 种人格族群的结构化画像，仅用于自我认知与反思参考。
       </p>
       <div class="badge-list">
         <span class="badge">8 种人格族群</span>
         <span class="badge">三视角评估</span>
-        <span class="badge">无广告干扰</span>
-        <span class="badge">隐私安全保障</span>
+        <span class="badge">快速版 / 标准版 / 完整版</span>
+        <span class="badge">测评-训练-追踪闭环</span>
+        <span class="badge"><i class="free-report-tag">基础报告免费</i></span>
       </div>
+      <a href="https://short.wailian2.cn/l/dO7hJ02iCCemsiDd" class="cta-main" target="_blank" rel="noopener noreferrer">立即开始人格测评</a>
+      <p class="cta-note">约 3–12 分钟完成，<strong>基础报告免费获取</strong>，按需选择深度分析版本</p>
     </section>
 
-    <!-- 核心转化区：小程序码+强引导 -->
+    <!-- 小程序码展示区域 -->
     <section class="qrcode-section">
-      <h2 style="color: #ff7a00; margin-bottom: 20px;">📱 微信扫码 · 立即开始测评</h2>
-      <img src="https://raw.githubusercontent.com/famoustommy/famoustommy.github.io/87f83776a0fcb815520d81bfade34330b6dc0ab3/qrcode-miniprogram.png" 
-           alt="易我经纬人格罗盘小程序码" 
-           class="qrcode-img">
-      <p class="qrcode-tip">长按识别二维码 · 无需复制链接 · 永久有效</p>
-      <p class="price-note">
-        扫码进入后，基础报告**永久免费**，深度专业版仅需 ¥19.9 即可解锁
+      <h2><span class="free-report-tag">基础报告免费</span>微信扫码直达测评</h2>
+      <img src="https://placeholder.qr-code.com/180x180" alt="易我经纬人格罗盘小程序码" class="qrcode-img">
+      <p class="qrcode-desc">微信扫码进入小程序，立即获取免费基础人格报告</p>
+      <p class="cta-note">若扫码无反应，可复制链接到微信打开</p>
+    </section>
+
+    <!-- 你可能遇到的情况 -->
+    <section>
+      <h2>你可能正在经历的情况</h2>
+      <p class="tagline">很多问题不是“没能力”，而是惯性模式始终没被看清。</p>
+      <ul>
+        <li>在不同人面前像两个人，连自己都难以解释这种落差。</li>
+        <li>关键场合总是用同一套反应方式，结果一次次失控。</li>
+        <li>道理都懂，但不知道从哪一条习惯、哪一种触发点下手调整。</li>
+      </ul>
+      <p class="muted">
+        人格罗盘想做的事，是把这些“看不见的惯性”翻译成可读的结构，
+        让你不再只靠情绪猜，而是更有依据地做选择。
       </p>
     </section>
 
-    <!-- 用户反馈区：建立信任 -->
+    <!-- 你会得到什么 -->
     <section>
-      <h2>💬 测评用户真实反馈</h2>
-      <p class="testimonial">「终于知道为什么我总是在社交场合紧张了，免费报告就已经很戳我了」</p>
-      <p class="testimonial">「专业版的深度分析太值了，19.9 元帮我找到了职业方向」</p>
+      <h2>做完这份测评，你会得到什么</h2>
+      <div class="columns columns-3">
+        <div class="card">
+          <div class="card-title">你的主导倾向</div>
+          <p class="card-text">
+            你更常用哪一套方式解决问题，它的优势是什么，代价又在哪里。
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-title">三视角差异</div>
+          <p class="card-text">
+            你如何理解自己，别人可能如何理解你，在压力或情境切换时会怎样变化。
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-title">可执行建议</div>
+          <p class="card-text">
+            更适合你的沟通方式、协作方式与习惯切入点，帮助你从“知道问题”走向“能改一点”。
+          </p>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:8px;">
+        <strong>基础报告免费包含核心人格倾向与三视角基础分析</strong>，结果是对行为倾向的描述，而不是给你贴标签。它帮助你看清选择空间，但不会替你做决定。
+      </p>
     </section>
 
-    <!-- 价值区：告诉用户能得到什么 -->
+    <!-- 测评流程 -->
     <section>
-      <h2>📋 做完测评你将获得</h2>
-      <ul class="benefit-list">
-        <li>✅ 免费：你的主导人格类型与核心行为倾向</li>
-        <li>✅ 免费：自我/他人/情境三视角差异分析</li>
-        <li>✅ 付费（¥19.9）：可落地的沟通与成长行动建议</li>
-        <li>✅ 付费（¥19.9）：专属人格画像 + 职业/关系场景建议</li>
-      </ul>
+      <h2>测评流程：3 步完成</h2>
+      <div class="columns">
+        <div class="card">
+          <div class="card-title">第 1 步：选择测评版本</div>
+          <p class="card-text">
+            可从快速版、标准版、完整版中选择。时间有限时先做快速版（<strong>基础报告免费</strong>），后续再补充更深入版本。
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-title">第 2 步：按直觉完成问卷</div>
+          <p class="card-text">
+            根据常见反应作答，不需要反复推敲。越贴近真实习惯，结果对你就越有参考价值。
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-title">第 3 步：查看报告与建议</div>
+          <p class="card-text">
+            免费查看基础报告（主导人格族群+核心倾向），按需解锁完整版深度分析与定制化建议。
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- 底部合规信息 -->
+    <!-- 适合人群 + FAQ -->
+    <section>
+      <div class="columns columns-2">
+        <div>
+          <h3>谁更适合先做一轮？</h3>
+          <ul>
+            <li>正在做职业选择或职场规划的人。</li>
+            <li>经常觉得“道理都懂但总是做不到”的人。</li>
+            <li>需要更好沟通、协作、带队的管理者。</li>
+            <li>想用更结构化方式理解自己的人。</li>
+          </ul>
+        </div>
+        <div>
+          <h3>常见问题</h3>
+          <div class="faq-item">
+            <div class="faq-q">这套测评有学术认证吗？</div>
+            <div class="faq-a">
+              这是一套产品团队自行设计的测评体系，目前尚未完成
+              心理测量学意义上的信度、效度与常模验证。
+              适合作为自我认知和反思参考，不用于临床诊断，也不替代心理咨询或医疗建议。
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">做一次大概需要多久？</div>
+            <div class="faq-a">
+              取决于你选择的版本：快速版通常在 3–5 分钟内完成（<strong>基础报告免费</strong>），
+              标准版和完整版会更详细，相应时间会更长一些。
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">基础报告包含哪些内容？</div>
+            <div class="faq-a">
+              基础报告免费包含核心人格族群判定、自我视角基础分析、3条核心行为倾向解读，
+              完整版将补充他人/情境视角分析、定制化行动建议、长期追踪工具等。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 核心转化：小程序一键跳转 + 免费引导 -->
+    <section style="background: linear-gradient(145deg, #f0f4ff, #eef2ff); border: 1px solid #e0e7ff;">
+      <h2 style="text-align: center; color: #4f46e5; margin-bottom: 8px;">立即进入易我经纬人格罗盘小程序</h2>
+      <p style="text-align:center; color:#4f46e5; margin-bottom:16px; font-size:14px;">
+        <span class="free-report-tag">基础报告免费</span> 扫码/点击即可获取你的人格画像
+      </p>
+      <a href="https://short.wailian2.cn/l/dO7hJ02iCCemsiDd" class="cta-secondary" target="_blank" rel="noopener noreferrer">点击进入 → 免费获取基础人格报告</a>
+      <p class="cta-note" style="margin-top: 10px;">微信内打开自动跳转小程序，外部浏览器将引导至微信打开</p>
+    </section>
+
+    <!-- 底部合规信息：公司/备案/域名（腾讯广告审核必备） -->
     <div class="footer">
-      青岛新趋势测评系统 版权所有 © 2025<br>
+      青岛新趋势测评长系统 版权所有 © 2025<br>
       网站名称：新趋势商贸官方网站 | 域名：yiwo.me
-      <div class="icp-info">鲁ICP备2025190855号-2 丨 本页面内容仅供自我认知参考，不构成任何专业建议</div>
+      <div class="icp-info">鲁ICP备2025190855号-2 丨 本页面内容仅供自我认知参考，不构成任何专业建议 | 基础报告免费，完整版为付费增值服务</div>
     </div>
   </div>
 </body>
